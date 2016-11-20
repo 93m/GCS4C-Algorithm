@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>알고리즘 문제2</title>
+</head>
+<script>
+function Algo2() {
+	var LM = 0;
+	for(var n=4; n<=7; n++){
+		var sum = 0;
+		var k = (n/2);
+		for(var j=1; j<=k; j++) {
+			var r = 0;
+			r = (n%j);
+			if(r==0) { sum = sum + j; }
+		}
+	if(n==sum) { 
+		LM = LM + 1; 
+		document.getElementById("value1").innerHTML="해당하는 정수는 " + n;
+		}
+	}
+	document.getElementById("value2").innerHTML="정수는 개수는 "+ LM;
+}	
+</script>
+<body>
+<p id="value1"></p>
+<p id="value2"></p>
+<button onclick="Algo2()">실행</button>
+</body>
+</html>
